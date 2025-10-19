@@ -53,10 +53,23 @@ main section.view1 {
 }
 main section.view1 .top {
   width: 100%;
+  position: relative;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+main section.view1 .top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.2;
+  pointer-events: none;
 }
 main section.view1 .top img {
   width: 100%;
-  border-radius: 0.7rem;
 }
 main section.view1 .bottom {
   background-color: #222222;
@@ -153,10 +166,23 @@ main section.view3 {
 }
 main section.view3 .top {
   width: 100%;
+  position: relative;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+main section.view3 .top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.09;
+  pointer-events: none;
 }
 main section.view3 .top img {
   width: 100%;
-  border-radius: 0.7rem;
 }
 main section.view3 .bottom {
   background-color: #222222;
@@ -195,12 +221,76 @@ main section.view3 .bottom .text p {
   line-height: 2rem;
   letter-spacing: 1px;
 }
+main section.view3-alt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+main section.view3-alt .top {
+  width: 100%;
+  position: relative;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+main section.view3-alt .top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.09;
+  pointer-events: none;
+}
+main section.view3-alt .top img {
+  width: 100%;
+}
+main section.view3-alt .bottom {
+  background-color: #222222;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+main section.view3-alt .bottom p {
+  font-family: f1;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+main section.view3-alt .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  line-height: 1.6rem;
+}
+main section.view3-alt .bottom .text h1 {
+  text-transform: uppercase;
+  font-family: f2;
+  font-weight: 400;
+  font-size: 2.3rem;
+  line-height: 2.7rem;
+  letter-spacing: 1px;
+  color: #cccccc;
+}
+main section.view3-alt .bottom .text p {
+  font-weight: 300;
+  font-size: 1.15rem;
+  opacity: 0.6;
+  text-transform: none;
+  font-family: f3;
+  line-height: 2rem;
+  letter-spacing: 1px;
+}
 main .heading {
   width: 100%;
   padding: 2rem;
+  font-family: f2;
 }
 main .heading h2 {
-  font-family: f2;
   font-size: 2rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -218,11 +308,24 @@ main section.view4 .card {
   background-size: cover;
   aspect-ratio: 1/1;
   border-radius: 0.7rem;
+  overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0rem;
   justify-content: space-between;
   padding: 1rem;
+}
+main section.view4 .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.2;
+  pointer-events: none;
 }
 main section.view4 .card .top {
   display: flex;
@@ -230,9 +333,9 @@ main section.view4 .card .top {
   justify-content: flex-end;
 }
 main section.view4 .card .icon {
-  background-color: rgba(170, 156, 148, 0.6588235294);
+  background-color: linear-gradient(105deg, #232d2b, #93857c);
   backdrop-filter: blur(4px);
-  border: 0.5px solid white;
+  box-shadow: inset 0 0 0 1px rgba(189, 179, 179, 0.789);
   border-radius: 50%;
   height: 2.5rem;
   width: 2.5rem;
@@ -242,23 +345,27 @@ main section.view4 .card .icon {
 }
 main section.view4 .card .bottom {
   background-color: rgba(170, 156, 148, 0.6588235294);
-  backdrop-filter: blur(4px);
-  border: 0.5px solid white;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 0 1px rgba(190, 188, 188, 0.696);
   border-radius: 0.5rem;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 2rem;
+  align-items: center;
+  padding: 1rem 1rem;
 }
 main section.view4 .card .bottom p {
-  font-family: f2;
   color: white;
   text-transform: uppercase;
 }
 main section.view4 .card .bottom p:nth-child(1) {
   font-size: 1.25rem;
+  font-family: f2;
+  font-weight: 100;
 }
 main section.view4 .card .bottom p:nth-child(2) {
-  font-size: 1rem;
+  font-size: 0.775rem;
+  font-family: f1;
+  font-weight: 300;
 }
 main section.view4 .card:nth-child(1) {
   background-image: url("./images/card1.webp");
@@ -268,6 +375,63 @@ main section.view4 .card:nth-child(2) {
 }
 main section.view4 .card:nth-child(3) {
   background-image: url("./images/card3.webp");
+}
+main section.view5 {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.view5 .top {
+  width: 100%;
+  position: relative;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+main section.view5 .top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.2;
+  pointer-events: none;
+}
+main section.view5 .top img {
+  width: 100%;
+  display: block;
+}
+main section.view5 .bottom {
+  background-color: #222222;
+  border-radius: 0.7rem;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.view5 .bottom p {
+  font-family: f1;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+main section.view5 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  line-height: 1.6rem;
+  width: 21rem;
+}
+main section.view5 .bottom .text h1 {
+  text-transform: uppercase;
+  font-family: f2;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 2.7rem;
+  letter-spacing: 1px;
+  color: #cccccc;
 }
 
 @media (min-width: 900px) {
@@ -315,12 +479,38 @@ main section.view4 .card:nth-child(3) {
   main section.view3 .bottom .paragraphs {
     display: flex;
     gap: 1.5rem;
+    font-family: f3;
   }
   main section.view3 .bottom .paragraphs .text h1 {
     font-size: 2.75rem;
     font-weight: 400;
   }
   main section.view3 .bottom .paragraphs .text p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  main section.view3-alt {
+    flex-direction: row;
+    padding: 1rem 2rem;
+  }
+  main section.view3-alt .top,
+  main section.view3-alt .bottom {
+    width: 50%;
+  }
+  main section.view3-alt .bottom {
+    justify-content: space-between;
+    padding: 3rem;
+  }
+  main section.view3-alt .bottom .paragraphs {
+    display: flex;
+    gap: 1.5rem;
+    font-family: f3;
+  }
+  main section.view3-alt .bottom .paragraphs .text h1 {
+    font-size: 2.75rem;
+    font-weight: 400;
+  }
+  main section.view3-alt .bottom .paragraphs .text p {
     font-size: 1rem;
     line-height: 1.8rem;
   }
@@ -335,6 +525,37 @@ main section.view4 .card:nth-child(3) {
   main section.view4 {
     flex-direction: row;
     padding: 2rem 2rem;
+  }
+  main section.view4 .bottom {
+    text-align: center;
+    font-size: 2rem;
+  }
+  main section.view5 {
+    flex-direction: row;
+    padding: 0.5rem 2rem;
+  }
+  main section.view5 .top,
+  main section.view5 .bottom {
+    width: 50%;
+  }
+  main section.view5 .bottom {
+    justify-content: start;
+    padding: 4rem;
+  }
+  main section.view5 .bottom p {
+    opacity: 0.7;
+    font-size: 0.875rem;
+    line-height: 160%;
+    font-family: f1;
+    font-weight: 300;
+  }
+  main section.view5 .bottom .text {
+    width: 70%;
+  }
+  main section.view5 .bottom .text h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 120%;
   }
 }
 /*# sourceMappingURL=style.css.map */
