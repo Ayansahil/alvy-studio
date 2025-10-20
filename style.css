@@ -333,7 +333,7 @@ main section.view4 .card .top {
   justify-content: flex-end;
 }
 main section.view4 .card .icon {
-  background-color: linear-gradient(105deg, #232d2b, #93857c);
+  background: linear-gradient(105deg, #232d2b, #93857c);
   backdrop-filter: blur(4px);
   box-shadow: inset 0 0 0 1px rgba(189, 179, 179, 0.789);
   border-radius: 50%;
@@ -433,8 +433,113 @@ main section.view5 .bottom .text h1 {
   letter-spacing: 1px;
   color: #cccccc;
 }
+main section.view6 {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+main section.view6 .bottom {
+  background-color: #cebd63;
+  border-radius: 0.7rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+main section.view6 .bottom p {
+  text-transform: uppercase;
+  font-family: f1;
+  font-weight: 400;
+  color: black;
+  opacity: 0.9;
+}
+main section.view6 .bottom h2 {
+  font-family: f2;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.817);
+  text-transform: uppercase;
+}
+main section.view6 .bottom button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 4rem;
+  border-radius: 0.5rem;
+  color: rgba(255, 255, 255, 0.792);
+  background-color: black;
+  border: none;
+  font-family: f1;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+main section.view6 .bottom button i {
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+main .footer-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.view7 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #121212;
+}
+main section.view7 .content-wrapper {
+  width: 100%;
+  background-color: #222222;
+  border-radius: 0.7rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  justify-content: space-between;
+}
+main section.view7 .content-wrapper .top {
+  display: flex;
+  justify-content: flex-start;
+}
+main section.view7 .content-wrapper .top img {
+  width: 3rem;
+}
+main section.view7 .content-wrapper .bottom {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+main section.view7 .content-wrapper .bottom .icon {
+  border-radius: 50%;
+  height: 2.7rem;
+  width: 2.7rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  place-items: center;
+  background-color: linear-gradient(105deg, #232d2b, #93857c);
+  box-shadow: inset 0 0 0 1px rgba(189, 179, 179, 0.789);
+}
 
 @media (min-width: 900px) {
+  .footer-wrapper {
+    flex-direction: row;
+    padding: 2rem 2rem 0.5rem;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+  }
   main section.view1 {
     flex-direction: row;
     padding: 1rem 2rem;
@@ -476,16 +581,16 @@ main section.view5 .bottom .text h1 {
     justify-content: space-between;
     padding: 3rem;
   }
-  main section.view3 .bottom .paragraphs {
+  main section.view3 .bottom .text h1 {
+    font-size: 2.75rem;
+    font-weight: 400;
+  }
+  main section.view3 .bottom .text .paragraphs {
     display: flex;
     gap: 1.5rem;
     font-family: f3;
   }
-  main section.view3 .bottom .paragraphs .text h1 {
-    font-size: 2.75rem;
-    font-weight: 400;
-  }
-  main section.view3 .bottom .paragraphs .text p {
+  main section.view3 .bottom .text p {
     font-size: 1rem;
     line-height: 1.8rem;
   }
@@ -501,16 +606,16 @@ main section.view5 .bottom .text h1 {
     justify-content: space-between;
     padding: 3rem;
   }
-  main section.view3-alt .bottom .paragraphs {
+  main section.view3-alt .bottom .text h1 {
+    font-size: 2.75rem;
+    font-weight: 400;
+  }
+  main section.view3-alt .bottom .text .paragraphs {
     display: flex;
     gap: 1.5rem;
     font-family: f3;
   }
-  main section.view3-alt .bottom .paragraphs .text h1 {
-    font-size: 2.75rem;
-    font-weight: 400;
-  }
-  main section.view3-alt .bottom .paragraphs .text p {
+  main section.view3-alt .bottom .text p {
     font-size: 1rem;
     line-height: 1.8rem;
   }
@@ -556,6 +661,60 @@ main section.view5 .bottom .text h1 {
     font-size: 2.5rem;
     font-weight: 400;
     line-height: 120%;
+  }
+  main section.view6 {
+    width: 100%;
+    padding: 0;
+  }
+  main section.view6 .bottom {
+    padding: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    height: 100%;
+  }
+  main section.view6 .bottom .left-content,
+  main section.view6 .bottom .right-content {
+    width: 50%;
+  }
+  main section.view6 .bottom .left-content p,
+  main section.view6 .bottom .right-content p {
+    font-size: 0.875rem;
+    padding-bottom: 1rem;
+  }
+  main section.view6 .bottom .left-content h2,
+  main section.view6 .bottom .right-content h2 {
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+    font-weight: 400;
+  }
+  main section.view6 .bottom .right-content {
+    text-align: right;
+    width: fit-content;
+  }
+  main section.view6 .bottom .right-content button {
+    font-size: 0.875rem;
+    padding: 0.875rem 1rem;
+    width: auto;
+    font-weight: 200;
+  }
+  main section.view7 {
+    width: 20%;
+    flex-direction: column;
+    padding: 0;
+  }
+  main section.view7 .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  main section.view7 .content-wrapper .bottom .icon {
+    height: 2.2rem;
+    width: 2.2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
